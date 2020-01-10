@@ -1,12 +1,9 @@
-import React from 'react';
-import './style.css';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import Expresso from './util/Expresso';
 
-import Menu from './menu';
-import Employee from './employee';
-
-class Landing extends React.Component {
+class Landing extends Component {
   constructor(props) {
     super(props);
 
@@ -44,13 +41,25 @@ class Landing extends React.Component {
 
   renderMenus() {
     return this.state.menus.map(menu => {
-      return <Menu className="item" key={menu.id} />;
+      return (
+        <Link to={`/menus/${menu.id}`}
+           className="item"
+           key={menu.id}>
+          <h3>{menu.title}</h3>
+        </Link>
+      );
     });
   }
 
   renderEmployees() {
     return this.state.employees.map(employee => {
-      return <Employee className="item" key={employee.id} />;
+      return (
+        <Link to={`/employees/${employee.id}`}
+           className="item"
+           key={employee.id}>
+           <h3>{employee.name}</h3>
+        </Link>
+      );
     });
   }
 
@@ -58,18 +67,15 @@ class Landing extends React.Component {
     return (
       <div className="Landing">
         <h2>MANAGE MENUS</h2>
-
         <div className="menu item-list">
           {this.renderMenus()}
         </div>
-
-        <div className="button">ADD</div>
+        <Link to="/menus/new" className="button">ADD</Link>
         <h2>MANAGE EMPLOYEES</h2>
-
         <div className="employee item-list">
           {this.renderEmployees()}
         </div>
-        <div className="button">ADD</div>
+        <Link to="/employees/new" className="button">ADD</Link>
       </div>
     );
   }

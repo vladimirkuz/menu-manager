@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { withRouter } from "react-router-dom";
 
 import Expresso from './util/Expresso';
 
-class Employee extends React.Component {
+class Employee extends Component {
   constructor(props) {
     super(props);
 
@@ -378,4 +379,4 @@ class Employee extends React.Component {
   }
 }
 
-export default Employee;
+export default withRouter(Employee);

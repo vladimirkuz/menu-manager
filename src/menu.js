@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { withRouter } from "react-router-dom";
 
 import Expresso from './util/Expresso';
 
-class Menu extends React.Component {
+class Menu extends Component {
   constructor(props) {
     super(props);
 
@@ -25,7 +26,7 @@ class Menu extends React.Component {
     this.deleteMenuItem = this.deleteMenuItem.bind(this);
   }
 
-  /*componentDidMount() {
+componentDidMount() {
     if (this.props.match.params.id === 'new') {
       const newMenu = {
         title: ''
@@ -54,7 +55,7 @@ class Menu extends React.Component {
         savedMenuItems: JSON.parse(JSON.stringify(sortedMenuItems))
       });
     });
-  }*/
+  }
 
   sortMenuItems(menuItems) {
     return menuItems.sort((menuItem1, menuItem2) => {
@@ -357,4 +358,4 @@ class Menu extends React.Component {
   }
 }
 
-export default Menu;
+export default withRouter(Menu);;
