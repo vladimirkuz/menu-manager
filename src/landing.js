@@ -66,12 +66,12 @@ class Landing extends Component {
   render() {
     return (
       <div className="Landing">
-        <h2>MANAGE MENUS</h2>
+        <h2>MENUS</h2>
         <div className="menu item-list">
           {this.renderMenus()}
         </div>
         <Link to="/menus/new" className="button">ADD</Link>
-        <h2>MANAGE EMPLOYEES</h2>
+        <h2>EMPLOYEES</h2>
         <div className="employee item-list">
           {this.renderEmployees()}
         </div>

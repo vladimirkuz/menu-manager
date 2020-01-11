@@ -26,6 +26,7 @@ class Menu extends Component {
     this.deleteMenuItem = this.deleteMenuItem.bind(this);
   }
 
+// runs after first render of component
 componentDidMount() {
     if (this.props.match.params.id === 'new') {
       const newMenu = {
@@ -39,6 +40,7 @@ componentDidMount() {
       return;
     }
 
+    // ${baseUrl}/menus/${id}
     Expresso.getMenu(this.props.match.params.id).then(menu => {
       if (menu) {
         this.setState({
@@ -48,6 +50,7 @@ componentDidMount() {
       }
     });
 
+    // ${baseUrl}/menus/${menuId}/menu-items
     Expresso.getMenuItems(this.props.match.params.id).then(menuItems => {
       const sortedMenuItems = this.sortMenuItems(menuItems);
       this.setState({

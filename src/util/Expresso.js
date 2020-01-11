@@ -2,7 +2,7 @@ import camelcaseKeys from './camelcase-keys/index';
 import 'whatwg-fetch';
 
 const Expresso = {};
-const baseUrl = 'http://localhost:4000/api';
+const baseUrl = 'https://aqueous-earth-34855.herokuapp.com/api';
 
 Expresso.getEmployees = () => {
   const url = `${baseUrl}/employees`;

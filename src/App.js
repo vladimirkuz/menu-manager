@@ -11,8 +11,8 @@ class App extends Component {
       <Router>
         <div className="App">
           <header>
-            <Link to="/" className="logo">
-              <img src='public/img/logo.svg' alt="logo" />
+            <Link to="/">
+            <h1>vladcancode</h1>
             </Link>
           </header>
           <Route exact path="/" component={Landing} />

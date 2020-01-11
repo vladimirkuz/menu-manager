@@ -10,6 +10,27 @@ html {
   color: #fff;
 }
 
+.App {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+  padding: .66rem 0;
+  text-align: center;
+  background-color: #2f0505;
+  font-family: Poppins, sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+h1 a:link, h1 a:visited {
+    color: white;
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
@@ -17,15 +38,15 @@ a {
 }
 
 input {
-  border-bottom: 1px solid #2f2f2f;
+  border-bottom: 2px solid #fff;
 }
 
 .button {
   display: inline-block;
-  padding: .5rem 1rem;
-  border-radius: 67px;
+  padding: 1rem;
+
   margin-right: .33rem;
-  background-color: #7e5a61;
+  background-color: #cc1b1b;
   letter-spacing: 0.3px;
   color: #fff;
   transition: .25s
@@ -36,10 +57,11 @@ input {
 .button.inactive,
 .button.inactive:hover {
   cursor: default !important;
-  background-color: grey !important;
+  background-color: #cc1b1b !important;
   color: #f5f1ee !important;
   opacity: .8 !important;
 }
+
 
 .delete.button {
   background-color: #f35858 !important;
@@ -50,30 +72,25 @@ input {
   background-color: #ca0505 !important;
 }
 
-.App header {
-  padding: .75rem 0;
-  border-bottom: solid 1px #979797;
-  background-color: #7e5a61;
-  text-align: center;
-}
+
 
 .Landing {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding-top: 4rem;
+  padding-top: 8rem;
   padding-bottom: 8rem;
-  background-color: #f3f3f3;
+  background-color: #c1853b;
 }
 
 .Landing h2 {
   margin-bottom: 1rem;
-  font-size: 1.125rem;
+  font-size: 2rem;
   font-weight: 600;
   letter-spacing: 0.3px;
   text-align: center;
-  color: #7e5a61;
+  color: #2f0505;
 }
 
 .Landing .item-list {
@@ -123,15 +140,15 @@ input {
 
 .Landing .button {
   padding: .5rem 1.5rem;
-  margin-bottom: 2rem;
-  font-size: 1rem;
+  margin-bottom: 4rem;
+  font-size: 1.2rem;
   border-radius: 67px;
-  background-color: #7e5a61;
+  background-color: #cc1b1b;
   transition: .25s;
 }
 
 .Landing .button:hover {
-  background-color: #ad9696;
+  background-color: rgb(204,27,27,0.5);
 }
 
 .Menu {
@@ -139,7 +156,7 @@ input {
   align-items: center;
   min-height: 100vh;
   padding: 0 1rem;
-  background-color: #f5f1ee;
+  background-color: #c1853b;
   text-align: center;
 }
 
@@ -148,7 +165,7 @@ input {
 }
 
 .Menu .button:hover {
-  background-color: #ab888e;
+  background-color: #cc1b1b;
 }
 
 .Menu .title {
@@ -158,7 +175,7 @@ input {
   padding-top: 2.875rem;
   margin-bottom: 2rem;
   text-align: center;
-  color: #2f2f2f;
+  color: #fff;
 }
 
 .Menu .title input {
@@ -166,9 +183,15 @@ input {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   text-align: center;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
   letter-spacing: 2.5px;
   font-weight: 800;
+  color: #fff;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
 }
 
 .Menu .menu-item-container {
@@ -176,7 +199,7 @@ input {
   flex-direction: column;
   border: solid 2px #7e5a61;
   text-align: center;
-  color: #2f2f2f;
+  color: white;
   line-height: 1.71;
   letter-spacing: 0.2px;
 }
@@ -185,16 +208,9 @@ input {
   display: flex;
 }
 
-.Menu .menu-item-container .header.row {
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.33;
-  letter-spacing: 0.3px;
-  color: #ffffff;
-}
 
 .Menu .menu-item-container .row:nth-child(odd) {
-  background-color: #c6a17e;
+  background-color: #7e5a61;
 }
 
 .Menu .row .item {
@@ -221,13 +237,13 @@ input {
 }
 
 .Menu .row:nth-child(even) .button {
-  background-color: #c6a17e;
+  background-color: #cc1b1b;
   color: #f5f1ee;
 }
 
 .Menu .row:nth-child(odd) .button {
-  background-color: #f5f1ee;
-  color: #c6a17e;
+  background-color: #cc1b1b;
+  color: #f5f1ee;
 }
 
 .Menu .row:nth-child(even) .button:hover {
@@ -245,17 +261,18 @@ input {
 .Employee {
   min-height: 100vh;
   padding: 1rem;
-  background-color: #e5dcd4;
+  background-color: #c1853b;
   text-align: center;
   line-height: 1.33;
   letter-spacing: 0.3px;
-  font-weight: 300;
-  font-size: 1.125rem;
+  font-weight: 500;
+  font-size: 1.8rem;
 }
 
 .Employee h2 {
   margin: 2rem 0;
-  color: #7e5a61;;
+  color: white;
+  font-size: 2rem;
 }
 
 .Employee .strong,
@@ -273,14 +290,14 @@ input {
 
 .Employee input {
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
   font-weight: 300;
 }
 
 .Employee .button {
   margin-top: 1rem;
-  background-color: #f5f1ee;
-  color: #a78881;
+
+  color: white;
   font-size: .875rem;
 }
 
